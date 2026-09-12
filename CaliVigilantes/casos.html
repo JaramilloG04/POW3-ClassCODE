@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casos registrados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Cali Vigilante</h1>
+
+    <button id="boton-tema" class="boton-tema" type="button">
+      Cambiar Tema
+    </button>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportar.html">Reportar un caso</a></li>
+        <li><a href="casos.html">Ver casos registrados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Casos registrados</h2>
+
+      <div class="campo">
+        <label for="buscador">Buscar por lugar o palabra clave</label>
+        <input
+          type="search"
+          id="buscador"
+          placeholder="Escribe un lugar o palabra"
+        >
+      </div>
+
+      <div class="campo">
+        <label for="filtro-autoridad">Filtrar por autoridad</label>
+        <select id="filtro-autoridad">
+          <option value="">Todas las autoridades</option>
+          <option value="Policía Nacional">Policía Nacional</option>
+          <option value="ESMAD">ESMAD</option>
+          <option value="Ejército">Ejército</option>
+          <option value="Otra">Otra</option>
+        </select>
+      </div>
+
+      <div id="contenedor-casos" class="casos-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

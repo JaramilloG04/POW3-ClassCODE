@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportar un caso</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Cali Vigilante</h1>
+
+    <button id="boton-tema" class="boton-tema" type="button">
+      Cambiar Tema
+    </button>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reporte.html">Reportar un caso</a></li>
+        <li><a href="casos.html">Ver casos registrados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Registrar un nuevo caso</h2>
+
+      <form id="form-reporte">
+        <div class="campo">
+          <label for="fecha">Fecha del hecho</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="campo">
+          <label for="lugar">Lugar (barrio / comuna)</label>
+          <input
+            type="text"
+            id="lugar"
+            name="lugar"
+            placeholder="Ej: Comuna 15, Cali"
+            minlength="3"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s#.,/-]+"
+            required
+          >
+        </div>
+
+        <div class="campo">
+          <label for="descripcion">Descripción del hecho</label>
+          <textarea
+            id="descripcion"
+            name="descripcion"
+            rows="4"
+            minlength="20"
+            required
+          ></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="autoridad">Autoridad involucrada</label>
+          <select id="autoridad" name="autoridad" required>
+            <option value="" selected disabled>Selecciona una opción</option>
+            <option value="Policía Nacional">Policía Nacional</option>
+            <option value="ESMAD">ESMAD</option>
+            <option value="Ejército">Ejército</option>
+            <option value="Otra">Otra</option>
+          </select>
+        </div>
+
+        <button type="submit">Enviar reporte</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
