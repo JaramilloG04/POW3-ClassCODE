@@ -1,0 +1,28 @@
+/* Estilos generales complementarios */
+
+:root {
+  --color-fondo: #bbbfc7;
+  --color-primario-oscuro: #053803;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+}
+
+.site-header {
+  background-color: #1e881a !important;
+}
+
+.site-header h1 {
+  letter-spacing: 0.02em;
+}
+
+section {
+  border: 1px solid rgba(5, 56, 3, 0.1);
+}
+
+.site-footer {
+  background-color: var(--color-primario-oscuro) !important;
+}
+
